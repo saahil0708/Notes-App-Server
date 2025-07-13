@@ -20,6 +20,10 @@ const PORT = process.env.PORT;
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the Notes App API');
+});
+
 app.use('/notes', NotesRoutes);
 app.use('/users', UserRoutes);
 
